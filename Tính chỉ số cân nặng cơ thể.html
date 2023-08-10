@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+<b>Nhập cân nặng (kg) :</b>
+<br>
+<input type="text" id="kg">
+<br>
+<b>Nhập chiều cao (m) :</b>
+<br>
+<input type="text" id="m">
+<br><br>
+<button onclick="kiem_tra()" id="kq">Kiểm tra</button>
+<p id="result"></p>
+<script>
+
+    function kiem_tra() {
+        let a=+document.getElementById("kg").value;
+        let b=+document.getElementById("m").value;
+        let c= a/(b*b);
+        if (c<18.5){
+            document.getElementById("result").innerHTML = "Chỉ số BMI của bạn là :" + c+".Underweight."+" Ăn thật nhiều vào nhé"+
+                "<img src='https://i.pinimg.com/originals/3b/97/63/3b97635b6bd4a5bfc436fbd3908f05e0.gif' alt='demo'/>";
+        }else if(18.5<=c<=25.0){
+            document.getElementById("result").innerHTML = "Chỉ số BMI của bạn là :" + c+".Normal";
+        }else if(25.0<=c<=30.0){
+            document.getElementById("result").innerHTML = "Chỉ số BMI của bạn là :" + c+".Overweight";
+        }else {
+            document.getElementById("result").innerHTML = "Chỉ số BMI của bạn là :" + c+".Obese"+ "<img src='https://i.pinimg.com/originals/73/4d/11/734d11cc677595ce3c3e5e3bba02721f.gif' alt='demo'/>";
+        }
+    }
+</script>
+</body>
+</html>

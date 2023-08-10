@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="anh" src="https://thuviendohoa.vn/upload/images/items/hinh-anh-trai-bong-da-png-452.webp" alt="demo" style="width: 20%"><br>
+<b>Click button below to move the image to right</b><br>
+<button onclick="di_chuyen()">Click me</button>
+<script>
+  luuanh =document.getElementById("anh");
+  function init() {
+      luuanh =document.getElementById("anh");
+      luuanh.style.position ="relative";
+      luuanh.style.left = "0px";
+  }
+  function di_chuyen() {
+      luuanh.style.left= parseInt(luuanh.style.left) +10 +"px";
+  }
+  window.onload= init;
+
+</script>
+</body>
+</html>

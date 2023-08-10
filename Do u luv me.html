@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="position: absolute;left: 275px;top: 290px">Do u luv me?</h1>
+<input type="button" value="YES" onclick="chon()" style="position: absolute;left: 300px;top: 350px">
+<input type="button" value="NO" onmouseover="tro_chuot()" id="x" style="position: absolute;left: 380px;top: 350px">
+<script>
+    function chon() {
+        alert("Yes,I also luv u")
+    }
+
+    function tro_chuot() {
+        let a= document.getElementById("x");
+        a.style.left = (Math.random()* window.innerHeight) +"px"
+        a.style.top = (Math.random()* window.innerWidth) + "px"
+
+        // let a= Math.round(Math.random()* window.innerHeight);
+        // let b= Math.round(Math.random()* window.innerWidth);
+        // document.getElementById("x").style.left =a +"px";
+        // document.getElementById("x").style.top =b +"px";
+    }
+</script>
+</body>
+</html>
